@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  font-family: "Montaga", serif;
+  margin: 0;
+  padding: 0;
+}
+/* Hilangkan scrollbar pada halaman */
+body {
+  overflow: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* Sembunyikan scrollbar */
+}
+
+/* halaman index login */
+.container {
+  display: flex; /* Make container a flex container for vertical centering */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically within viewport */
+  min-height: 100vh; /* Set container height to 100vh for full viewport */
+  padding: 0 20px; /* Opsional, untuk memberikan ruang ekstra di sisi kiri dan kanan pada layar kecil */
+}
+.header {
+  display: flex; /* Make header a flex container */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text */
+}
+.header h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.btn-primary {
+  background-color: #4b6cb7;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #375a9e;
+}
+.form-label {
+  margin-bottom: 0; /* Remove bottom margin from label */
+  flex-shrink: 0; /* Prevent label from shrinking on smaller screens */
+}
+
+.form-control {
+  flex-grow: 1; /* Allow input to expand to fill available space */
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+.form-control:focus {
+  border-color: #28a745;
+  outline: none;
+}
+.alert {
+  margin-top: 20px;
+}
+.login-box {
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%; /* Pastikan lebar login box menyesuaikan layar */
+  max-width: 450px; /* Batasi lebar maksimum untuk kotak login */
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* tutup login */
+/*  header Navbar */
+.navbar {
+  background-color: #87a2ff; /* Warna latar belakang utama navbar */
+  color: black; /* Warna tulisan utama navbar */
+}
+/* warna navbar item */
+.nav-item .nav-link {
+  color: black;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #c4d7ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* gaya dropdown saat di-hover */
+.dropdown-item:hover {
+  background-color: #c4d7ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* navbar yang aktif .navbar-nav .nav-link.active {
+  color: white;
+} */
+/* tutup header navbar */
+/* CONTENT */
+.content {
+  margin: 20px;
+  margin-bottom: auto;
+  padding: 1.5rem; /* Memberikan ruang di sekitar konten */
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 0;
+}
+/* card index */
+.card {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 3px 0 5px;
+}
+.card-title {
+  font-size: 20px;
+}
+/* Tampilan kotak */
+.box {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+/* Gaya form dan label */
+.form-group {
+  display: flex;
+  align-items: center; /* Menyelaraskan label dan input secara vertikal */
+  gap: 15px; /* Memberikan jarak antara label dan input */
+}
+.form-group .form-label {
+  flex-basis: 25%; /* Menentukan lebar label agar sejajar */
+  margin: 0;
+}
+
+.form-group .form-control,
+textarea,
+select {
+  flex: 1; /* Membuat input mengisi sisa ruang */
+}
+
+/* Button styling */
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+/* untuk tabel */
+.button-container form {
+  display: flex;
+  flex-wrap: nowrap; /* Mencegah elemen form turun ke bawah */
+  align-items: center; /* Menjaga elemen tetap sejajar vertikal */
+  gap: 8px;
+  justify-content: flex-end;
+}
+.button-container label {
+  margin-bottom: 0; /* Menghilangkan margin default */
+}
+.button-container .form-control,
+.button-container .btn {
+  height: auto; /* Sesuaikan tinggi elemen */
+  padding: 6px 12px; /* Sesuaikan padding agar seimbang */
+  font-size: 1rem;
+}
+.button-container input[type="date"],
+.button-container input[type="submit"] {
+  max-width: 100%;
+}
+.table {
+  width: 100%;
+  overflow-x: auto; /* Tambahkan scrollbar horizontal jika tabel terlalu lebar */
+  border-collapse: collapse; /* Menghilangkan jarak antara border tabel */
+}
+/* Memastikan setiap kolom memiliki lebar minimum */
+.table th.aksi-column,
+.table td.aksi-column {
+  width: 150px; /* Atur lebar kolom Aksi */
+}
+
+.table th,
+.table td {
+  font-size: 1rem; /* Ukuran huruf ditingkatkan */
+  padding: 8px;
+  vertical-align: middle;
+}
+/* Tombol Aksi */
+.square-btn {
+  width: 30px; /* Sesuaikan lebar sesuai kebutuhan */
+  height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
+  display: flex; /* Memungkinkan konten di dalam tombol untuk diatur */
+  justify-content: center; /* Pusatkan konten horizontal */
+  align-items: center; /* Pusatkan konten vertikal */
+}
+.table .action-buttons {
+  display: flex;
+  gap: 4px; /* Jarak antar tombol */
+  flex-wrap: nowrap; /* Mencegah tombol turun ke bawah */
+  justify-content: center;
+}
+/* Penyesuaian Margin dan Padding */
+.button-container,
+.pagination {
+  margin-bottom: 20px;
+}
+.text-start button {
+  margin-top: 20px;
+}
+/* akhir tabel */
+/* Custom untuk rt */
+
+.subjudul {
+  margin-bottom: 1rem; /* Space below the subtitle */
+}
+/* Ensure the box takes full width */
+.box-rt,
+.box-rw {
+  width: 100%;
+}
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap; /* Mengizinkan pembungkusan ke baris berikutnya */
+}
+.form-check {
+  width: 50%; /* Membagi dua kolom */
+  box-sizing: border-box; /* Agar padding dan margin tidak mempengaruhi total width */
+  padding: 5px; /* Menambahkan padding agar lebih rapi */
+}
+/* Custom untuk rt */
+
+/* filter data */
+.filter-container {
+  max-width: 500px; /* Maksimum lebar untuk box filter */
+  width: 100%; /* Lebar 100% pada layar kecil */
+  padding: 15px; /* Tambahkan padding agar terlihat lebih rapi */
+}
+.filter-container .form-label {
+  white-space: nowrap; /* Mencegah label terpotong dengan menghindari pembungkus */
+  min-width: 150px; /* Memberikan lebar minimum agar label tidak terpotong */
+}
+
+.filter-container .form-control,
+.form-select {
+  flex-grow: 1; /* Memungkinkan input dan select untuk mengambil ruang yang tersedia */
+}
+
+/* akhir filter */
+/* BAGIAN FOOTER */
+.footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white; /* Warna latar belakang footer */
+  text-align: center;
+  padding: 1rem;
+}
+/* AKHIR FOOTER */
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+  .box {
+    margin-bottom: 1.5rem; /* More space on smaller screens */
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .pagination {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .pagination a {
+    font-size: 0.875rem;
+  }
+  .table-responsive {
+    overflow-x: auto; /* Menambahkan scrollbar horizontal */
+    -webkit-overflow-scrolling: touch; /* Menyediakan scrolling yang halus pada perangkat iOS */
+  }
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    overflow-x: auto; /* Memungkinkan scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Menambahkan scrolling halus pada perangkat sentuh */
+  }
+  .content {
+    padding: 1rem;
+  }
+  .box {
+    padding: 1rem;
+  }
+  .form-group {
+    gap: 0.25rem;
+    flex-direction: column; /* Membuat label dan input ditumpuk */
+    align-items: flex-start; /* Mengatur posisi label ke kiri */
+  }
+  .form-label {
+    width: auto; /* Membiarkan label menyesuaikan lebar konten */
+    margin-bottom: 0.5rem; /* Menambahkan jarak di bawah label */
+  }
+  .form-control {
+    width: 100%; /* Membuat input mengisi lebar penuh */
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  /* button {
+    width: 20%;
+    font-size: 0.9rem;
+  } */
+  .navbar-toggler {
+    width: auto;
+    font-size: initial;
+  }
+  .filter-container {
+    padding: 10px; /* Padding lebih kecil pada layar kecil */
+  }
+
+  .filter-container .d-flex {
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: stretch; /* Pastikan semua elemen menggunakan lebar penuh */
+  }
+
+  .filter-container .form-label {
+    min-width: auto; /* Hapus lebar minimum pada layar kecil */
+    margin-bottom: 5px; /* Tambahkan jarak di bawah label */
+  }
+
+  .filter-container .form-control,
+  .form-select {
+    width: 100%; /* Pastikan input dan select menggunakan lebar penuh */
+  }
+
+  .filter-container .btn {
+    width: 100%; /* Tombol menggunakan lebar penuh pada layar kecil */
+    margin-top: 10px; /* Tambahkan jarak di atas tombol */
+  }
+}
+
+/* Responsive untuk perangkat sangat kecil */
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .content {
+    padding: 10px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .table {
+    font-size: 12px; /* Ukuran font lebih kecil */
+  }
+
+  .table th,
+  .table td {
+    padding: 5px; /* Mengurangi padding untuk menghemat ruang */
+    white-space: nowrap; /* Menghindari pembungkus teks */
+  }
+  /* Penyesuaian tombol */
+  .btn {
+    font-size: 10px; /* Ukuran font tombol lebih kecil */
+    padding: 5px;
+  }
+
+  .pagination .page-item .page-link {
+    font-size: 10px;
+    padding: 5px 7px;
+  }
+
+  /* Mengatur ulang form filter */
+  .filter-container h5 {
+    font-size: 14px;
+  }
+
+  .filter-container input[type="text"] {
+    font-size: 10px;
+  }
+
+  .d-flex.align-items-center label,
+  .d-flex.align-items-center .form-control {
+    font-size: 10px;
+    padding: 2px;
+  }
+  .d-flex {
+    flex-direction: column; /* Ubah arah flex menjadi kolom */
+    align-items: stretch; /* Mungkinkan elemen untuk mengisi lebar penuh */
+  }
+
+  .filter-container {
+    margin-top: 10px; /* Tambahkan jarak antar elemen */
+  }
+
+  .btn {
+    width: 100%; /* Buat tombol mengisi lebar penuh */
+    margin-bottom: 5px; /* Tambahkan jarak di bawah tombol */
+  }
+
+  .form-control {
+    flex: 1; /* Membuat input filter mengisi ruang yang tersisa */
+  }
+}
